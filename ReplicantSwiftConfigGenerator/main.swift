@@ -5,7 +5,26 @@
 //  Created by Mafalda on 2/4/22.
 //
 
+import ArgumentParser
 import Foundation
 
-print("Hello, World!")
+enum Command {}
 
+extension Command
+{
+    struct Main: ParsableCommand
+    {
+        static var configuration: CommandConfiguration
+        {
+            .init(
+                commandName: "ReplicantConfigGenerator",
+                abstract: "A tool for generating Replicant config json files for Replicant Swift implementations.",
+                subcommands: [
+                    Command.ClientConfig.self
+                ]
+            )
+        }
+    }
+}
+
+Command.Main.main()

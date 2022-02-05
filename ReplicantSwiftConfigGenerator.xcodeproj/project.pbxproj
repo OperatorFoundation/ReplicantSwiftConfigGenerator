@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AEEB3DAB27ADFC1A00FA80AF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEB3DAA27ADFC1A00FA80AF /* main.swift */; };
+		AEEB3DB327ADFD6F00FA80AF /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = AEEB3DB227ADFD6F00FA80AF /* ArgumentParser */; };
+		AEEB3DB627ADFDAF00FA80AF /* ReplicantSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AEEB3DB527ADFDAF00FA80AF /* ReplicantSwift */; };
+		AEEB3DB827ADFF8000FA80AF /* ClientConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEB3DB727ADFF8000FA80AF /* ClientConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,7 @@
 /* Begin PBXFileReference section */
 		AEEB3DA727ADFC1A00FA80AF /* ReplicantSwiftConfigGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ReplicantSwiftConfigGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEB3DAA27ADFC1A00FA80AF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AEEB3DB727ADFF8000FA80AF /* ClientConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEEB3DB327ADFD6F00FA80AF /* ArgumentParser in Frameworks */,
+				AEEB3DB627ADFDAF00FA80AF /* ReplicantSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				AEEB3DAA27ADFC1A00FA80AF /* main.swift */,
+				AEEB3DB727ADFF8000FA80AF /* ClientConfig.swift */,
 			);
 			path = ReplicantSwiftConfigGenerator;
 			sourceTree = "<group>";
@@ -78,6 +85,10 @@
 			dependencies = (
 			);
 			name = ReplicantSwiftConfigGenerator;
+			packageProductDependencies = (
+				AEEB3DB227ADFD6F00FA80AF /* ArgumentParser */,
+				AEEB3DB527ADFDAF00FA80AF /* ReplicantSwift */,
+			);
 			productName = ReplicantSwiftConfigGenerator;
 			productReference = AEEB3DA727ADFC1A00FA80AF /* ReplicantSwiftConfigGenerator */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +117,10 @@
 				Base,
 			);
 			mainGroup = AEEB3D9E27ADFC1A00FA80AF;
+			packageReferences = (
+				AEEB3DB127ADFD6F00FA80AF /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+				AEEB3DB427ADFDAF00FA80AF /* XCRemoteSwiftPackageReference "ReplicantSwift" */,
+			);
 			productRefGroup = AEEB3DA827ADFC1A00FA80AF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -120,6 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEEB3DB827ADFF8000FA80AF /* ClientConfig.swift in Sources */,
 				AEEB3DAB27ADFC1A00FA80AF /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +302,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AEEB3DB127ADFD6F00FA80AF /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		AEEB3DB427ADFDAF00FA80AF /* XCRemoteSwiftPackageReference "ReplicantSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OperatorFoundation/ReplicantSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AEEB3DB227ADFD6F00FA80AF /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AEEB3DB127ADFD6F00FA80AF /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+		AEEB3DB527ADFDAF00FA80AF /* ReplicantSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AEEB3DB427ADFDAF00FA80AF /* XCRemoteSwiftPackageReference "ReplicantSwift" */;
+			productName = ReplicantSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AEEB3D9F27ADFC1A00FA80AF /* Project object */;
 }
