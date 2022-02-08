@@ -20,7 +20,8 @@ extension Command
                 commandName: "ReplicantConfigGenerator",
                 abstract: "A tool for generating Replicant config json files for Replicant Swift implementations.",
                 subcommands: [
-                    Command.ClientConfig.self
+                    Command.ReplicantClientConfigGen.self,
+                    Command.ToneBurstClientConfigGen.self
                 ]
             )
         }

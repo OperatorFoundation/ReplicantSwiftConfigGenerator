@@ -1,5 +1,5 @@
 //
-//  ClientConfig.swift
+//  ReplicantClientConfigGen.swift
 //  ReplicantSwiftConfigGenerator
 //
 //  Created by Mafalda on 2/4/22.
@@ -11,13 +11,13 @@ import AST
 
 extension Command
 {
-    struct ClientConfig: ParsableCommand
+    struct ReplicantClientConfigGen: ParsableCommand
     {
         static var configuration: CommandConfiguration
         {
             .init(
-                commandName: "client",
-                abstract: "Generates a Replicant Client Config"
+                commandName: "replicant-client",
+                abstract: "Generates a Replicant client config file."
             )
         }
         
@@ -39,6 +39,19 @@ extension Command
         func run() throws
         {
             print("\n📝  Generating client config file.\n")
+            
+            
+            // Polish
+            if let polishPath = polish
+            {
+                
+            }
+            
+            // ToneBurst
+            if let toneBurstPath = toneBurst
+            {
+                
+            }
         }
         
         func validate() throws
@@ -47,7 +60,7 @@ extension Command
             guard dirURL.hasDirectoryPath
             else
             {
-                throw Error.savePathIsNotDirectory
+                throw Error.savePathIsNotDirectory(path: saveDirectoryPath)
             }
             
             if let polishPath = polish
@@ -71,7 +84,7 @@ extension Command
         enum Error: LocalizedError
         {
             case fileNotFound(path: String)
-            case savePathIsNotDirectory
+            case savePathIsNotDirectory(path: String)
             case saveFailure
             
             
@@ -81,8 +94,8 @@ extension Command
                 {
                     case .fileNotFound(let path):
                         return "Failed to find a file at the specified path: \(path)"
-                    case .savePathIsNotDirectory:
-                        return "The provided save path is not a directory."
+                    case .savePathIsNotDirectory(let path):
+                        return "The provided save path is not a directory. Provided path: \(path)"
                     case .saveFailure:
                         return "Failed to save the config file to the provided directory."
                 }

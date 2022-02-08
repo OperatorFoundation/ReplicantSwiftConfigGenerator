@@ -10,7 +10,8 @@
 		AEEB3DAB27ADFC1A00FA80AF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEB3DAA27ADFC1A00FA80AF /* main.swift */; };
 		AEEB3DB327ADFD6F00FA80AF /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = AEEB3DB227ADFD6F00FA80AF /* ArgumentParser */; };
 		AEEB3DB627ADFDAF00FA80AF /* ReplicantSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AEEB3DB527ADFDAF00FA80AF /* ReplicantSwift */; };
-		AEEB3DB827ADFF8000FA80AF /* ClientConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEB3DB727ADFF8000FA80AF /* ClientConfig.swift */; };
+		AEEB3DB827ADFF8000FA80AF /* ReplicantClientConfigGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEB3DB727ADFF8000FA80AF /* ReplicantClientConfigGen.swift */; };
+		AEEB3DBA27B1EE4B00FA80AF /* ToneBurstClientConfigGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEB3DB927B1EE4B00FA80AF /* ToneBurstClientConfigGen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,7 +29,8 @@
 /* Begin PBXFileReference section */
 		AEEB3DA727ADFC1A00FA80AF /* ReplicantSwiftConfigGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ReplicantSwiftConfigGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEB3DAA27ADFC1A00FA80AF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		AEEB3DB727ADFF8000FA80AF /* ClientConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientConfig.swift; sourceTree = "<group>"; };
+		AEEB3DB727ADFF8000FA80AF /* ReplicantClientConfigGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicantClientConfigGen.swift; sourceTree = "<group>"; };
+		AEEB3DB927B1EE4B00FA80AF /* ToneBurstClientConfigGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToneBurstClientConfigGen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				AEEB3DAA27ADFC1A00FA80AF /* main.swift */,
-				AEEB3DB727ADFF8000FA80AF /* ClientConfig.swift */,
+				AEEB3DB727ADFF8000FA80AF /* ReplicantClientConfigGen.swift */,
+				AEEB3DB927B1EE4B00FA80AF /* ToneBurstClientConfigGen.swift */,
 			);
 			path = ReplicantSwiftConfigGenerator;
 			sourceTree = "<group>";
@@ -135,8 +138,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEEB3DB827ADFF8000FA80AF /* ClientConfig.swift in Sources */,
+				AEEB3DB827ADFF8000FA80AF /* ReplicantClientConfigGen.swift in Sources */,
 				AEEB3DAB27ADFC1A00FA80AF /* main.swift in Sources */,
+				AEEB3DBA27B1EE4B00FA80AF /* ToneBurstClientConfigGen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
